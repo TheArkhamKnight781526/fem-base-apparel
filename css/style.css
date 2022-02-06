@@ -1,0 +1,200 @@
+header {
+  padding: 31px 32px;
+}
+
+#hero,
+#hero img {
+  width: 100%;
+}
+
+#hero #hero-desktop {
+  display: none;
+}
+
+main #text {
+  padding: 0 32px;
+  text-align: center;
+  max-width: 768px;
+  margin: 0 auto;
+  margin-top: 64px;
+}
+
+main #text h1 {
+  margin-bottom: 16px;
+}
+
+main #text h1 span {
+  display: block;
+  font-weight: 600;
+  font-size: 40px;
+  letter-spacing: 10.83px;
+  line-height: 42px;
+  text-transform: uppercase;
+  color: var(--dark-grey-red);
+}
+
+main #text h1 span#highlight {
+  font-weight: 300;
+  color: var(--desaturated-red);
+}
+
+main #text p {
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--desaturated-red);
+  margin-bottom: 32px;
+}
+
+main #text #signup {
+  height: 48px;
+  width: 100%;
+  border: 1px solid var(--desaturated-red);
+  border-radius: 28px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+}
+
+main #text #signup.error {
+  border: 2px solid var(--soft-red);
+}
+
+main #text #signup.error::before {
+  content: url("/images/icon-error.svg");
+  position: absolute;
+  right: 72px;
+  line-height: 0;
+}
+
+main #text #signup.error::after {
+  content: "Please provide a valid email";
+  position: absolute;
+  left: 24px;
+  bottom: -21px;
+  font-size: 13px;
+  line-height: 13px;
+  color: var(--soft-red);
+}
+
+main #text #signup #email {
+  display: block;
+  width: 100%;
+  outline: none;
+  border: none;
+  background: transparent;
+  color: var(--dark-grey-red);
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 400;
+  margin-left: 24px;
+}
+
+main #text #signup #email::placeholder {
+  color: var(--desaturated-red);
+}
+
+main #text #signup #submit {
+  display: block;
+  background: var(--gradient-2);
+  height: 48px;
+  width: 64px;
+  border-radius: 28px;
+  object-fit: none;
+  object-position: 28px center;
+  flex-shrink: 0;
+  margin-left: 24px;
+  margin-right: -1px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+main #text #signup #submit:hover {
+  box-shadow: 0px 15px 20px rgba(198, 110, 110, 0.247569);
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 1440px) {
+  header {
+    position: fixed;
+    top: 0;
+    padding-left: 165px;
+  }
+
+  #hero #hero-mobile {
+    display: none;
+  }
+
+  #hero #hero-desktop {
+    display: block;
+  }
+
+  main {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  main #text {
+    margin: 0;
+    padding-left: 165px;
+    box-sizing: content-box;
+    width: 404px;
+    height: min-content;
+    text-align: left;
+  }
+
+  main #text h1 span {
+    font-size: 64px;
+    line-height: 71px;
+    letter-spacing: 17.3206px;
+  }
+
+  main #text h1 span#highlight {
+    line-height: 64px;
+  }
+
+  main #text p {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  main #text #signup {
+    height: 56px;
+  }
+
+  main #text #signup #email {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  main #text #signup #submit {
+    height: 56px;
+    width: 100px;
+    object-position: 46px center;
+  }
+
+  main #text #signup.error::before {
+    right: 116px;
+  }
+
+  main #text #signup.error::after {
+    line-height: 28px;
+    bottom: -32px;
+  }
+
+  #hero {
+    width: fit-content;
+    flex-shrink: 0;
+  }
+
+  #hero img {
+    height: 100vh;
+    aspect-ratio: 61/80;
+    flex-shrink: 0;
+    max-width: 50vw;
+    object-fit: cover;
+    object-position: top;
+  }
+}
